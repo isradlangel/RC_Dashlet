@@ -1,0 +1,25 @@
+{{!--
+/**
+ * Row & Column Dashlet v1.0 ©2018 Kenneth Brill (ken.brill@gmail.com)
+ Licensed by Kenneth Brill under the MIT license.
+ */
+--}}
+Report Name: {{report_name}}
+<table id='{{report_id}}' class='stripe row-border order-column' cellspacing='0' width='100%'>
+    <thead>
+        <tr>
+            {{#each header}}
+                <th width="{{width}}%">{{text}}</th>
+            {{/each}}
+        </tr>
+    </thead>
+    <tbody>
+    {{#each body}}
+        <tr>
+        {{#each this}}
+            <td>{{this}}</td>
+        {{/each}}
+        </tr>
+    {{/each}}
+    </tbody>
+</table>
